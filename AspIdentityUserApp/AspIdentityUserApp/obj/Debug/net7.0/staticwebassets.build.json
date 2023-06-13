@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "i9H5P+NVmLiBbWgUH/016akiYC78AXD7jvcpUrLpFbU=",
+  "Source": "AspIdentityUserApp",
+  "BasePath": "_content/AspIdentityUserApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
