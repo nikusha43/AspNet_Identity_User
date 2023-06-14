@@ -7,9 +7,11 @@ namespace AspIdentityUserApp.DB
 {
     public class ApplicationDbContext : IdentityDbContext<User>
     {
-        public ApplicationDbContext()
-        {
-                
-        }
+        public ApplicationDbContext() { }
+        
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+
+        //public DbSet<User> Users { get; set; }
+        
     }
 }
