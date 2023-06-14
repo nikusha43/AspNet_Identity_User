@@ -1,6 +1,8 @@
-﻿namespace AspIdentityUserApp.Models
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace AspIdentityUserApp.Models
 {
-    public class UserRole
+    public class UserRole:IdentityUser<string>
     {
     }
 }
