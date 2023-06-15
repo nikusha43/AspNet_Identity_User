@@ -2,7 +2,7 @@
 
 namespace AspIdentityUserApp.Models
 {
-    public class UserRole:IdentityUser
+    public class UserRole:IdentityRole
     {
     }
 }

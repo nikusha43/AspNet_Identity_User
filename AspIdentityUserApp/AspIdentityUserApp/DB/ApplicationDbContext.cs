@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AspIdentityUserApp.DB
 {
-    public class ApplicationDbContext : IdentityDbContext<User>
+    public class ApplicationDbContext : IdentityDbContext<User,UserRole,string>
     {
         public ApplicationDbContext() { }
         
