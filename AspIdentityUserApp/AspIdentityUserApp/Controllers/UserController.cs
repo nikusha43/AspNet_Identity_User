@@ -50,5 +50,13 @@ namespace AspIdentityUserApp.Controllers
             return Ok(new { Status = result });
         }
 
+        [HttpGet]
+        [Route("/Get All")]
+        public async Task<IActionResult> GetAllUsersAsync()
+        {
+            var users = await _userRepo.GetAllUsersAsync();
+            return Ok(users);
+        }
+
     }
 }

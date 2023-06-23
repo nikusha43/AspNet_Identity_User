@@ -1,6 +1,9 @@
-﻿using AspIdentityUserApp.Models;
+﻿using AspIdentityUserApp.DB;
+using AspIdentityUserApp.Dtos;
+using AspIdentityUserApp.Models;
 using AspIdentityUserApp.Services.Abstraction;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace AspIdentityUserApp.Services
 {
@@ -8,10 +11,12 @@ namespace AspIdentityUserApp.Services
     {
         private readonly UserManager<User> _userManager = default;
         private readonly SignInManager<User> _signInManager = default;
-        public UserRepository(UserManager<User> userManager, SignInManager<User> signInManager)
-        {   
+        private readonly ApplicationDbContext _db;
+        public UserRepository(UserManager<User> userManager, SignInManager<User> signInManager, ApplicationDbContext db)
+        {
             _userManager = userManager;
             _signInManager = signInManager;
+            _db = db;
         }
         public async Task<bool> DeleteUserAsync(string id)
         {
@@ -19,6 +24,19 @@ namespace AspIdentityUserApp.Services
              var result = await _userManager.DeleteAsync(user);
 
             return result.Succeeded;
+        }
+
+        public async Task<List<UserDto>> GetAllUsersAsync()
+        {
+            var users = await _userManager.Users.ToListAsync();
+            var userList = users.Select(user => new UserDto
+            { 
+                UserName = user.UserName,
+                Email = user.Email
+               
+            }).ToList();
+
+            return userList;
         }
 
         public async Task<bool> LoginUserAsync(string email, string password, bool RemmemberMe)
