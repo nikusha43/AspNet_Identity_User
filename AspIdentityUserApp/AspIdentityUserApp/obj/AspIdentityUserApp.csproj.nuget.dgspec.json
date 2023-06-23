@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mazza\\source\\repos\\nikusha43\\AspNet_Identity_User\\AspIdentityUserApp\\AspIdentityUserApp\\AspIdentityUserApp.csproj": {}
+    "C:\\Users\\Mazza\\Source\\Repos\\nikusha43\\AspNet_Identity_User\\AspIdentityUserApp\\AspIdentityUserApp\\AspIdentityUserApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mazza\\source\\repos\\nikusha43\\AspNet_Identity_User\\AspIdentityUserApp\\AspIdentityUserApp\\AspIdentityUserApp.csproj": {
+    "C:\\Users\\Mazza\\Source\\Repos\\nikusha43\\AspNet_Identity_User\\AspIdentityUserApp\\AspIdentityUserApp\\AspIdentityUserApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mazza\\source\\repos\\nikusha43\\AspNet_Identity_User\\AspIdentityUserApp\\AspIdentityUserApp\\AspIdentityUserApp.csproj",
+        "projectUniqueName": "C:\\Users\\Mazza\\Source\\Repos\\nikusha43\\AspNet_Identity_User\\AspIdentityUserApp\\AspIdentityUserApp\\AspIdentityUserApp.csproj",
         "projectName": "AspIdentityUserApp",
-        "projectPath": "C:\\Users\\Mazza\\source\\repos\\nikusha43\\AspNet_Identity_User\\AspIdentityUserApp\\AspIdentityUserApp\\AspIdentityUserApp.csproj",
+        "projectPath": "C:\\Users\\Mazza\\Source\\Repos\\nikusha43\\AspNet_Identity_User\\AspIdentityUserApp\\AspIdentityUserApp\\AspIdentityUserApp.csproj",
         "packagesPath": "C:\\Users\\Mazza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mazza\\source\\repos\\nikusha43\\AspNet_Identity_User\\AspIdentityUserApp\\AspIdentityUserApp\\obj\\",
+        "outputPath": "C:\\Users\\Mazza\\Source\\Repos\\nikusha43\\AspNet_Identity_User\\AspIdentityUserApp\\AspIdentityUserApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mazza\\AppData\\Roaming\\NuGet\\NuGet.Config",

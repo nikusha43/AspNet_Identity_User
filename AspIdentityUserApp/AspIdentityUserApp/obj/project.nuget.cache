@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dNWx6ftdflBC8Hb3ipKjP0XcEkZUF2Vxg/RmLhzgZ6++ZgpBqYLDfYfBaQIdaUTu/ZNorpa4cKJXeKbo5cWAgg==",
+  "dgSpecHash": "eex8GUZfAwjAikT2ecUsVb1y9HtTiyQjnmktkRJQIOSkpwHmU1JCBU2PxD3NlmzTSL8yX+ssHuoHsuf1jb0+sw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mazza\\source\\repos\\nikusha43\\AspNet_Identity_User\\AspIdentityUserApp\\AspIdentityUserApp\\AspIdentityUserApp.csproj",
+  "projectFilePath": "C:\\Users\\Mazza\\Source\\Repos\\nikusha43\\AspNet_Identity_User\\AspIdentityUserApp\\AspIdentityUserApp\\AspIdentityUserApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mazza\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Mazza\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

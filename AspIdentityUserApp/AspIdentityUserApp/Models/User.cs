@@ -8,8 +8,5 @@ namespace AspIdentityUserApp.Models
         public string Surname { get; set; }
         public enum GenderType {Male,Female,Other};
         public GenderType Gender { get; set; }
-
-
-       
     }
 }

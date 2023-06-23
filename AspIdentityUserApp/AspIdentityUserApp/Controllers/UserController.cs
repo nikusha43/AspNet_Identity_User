@@ -6,71 +6,49 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AspIdentityUserApp.Controllers
 {
-    public class UserController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class UserController : ControllerBase
     {
-        private readonly IUserRepository _userRepo = default;
+        private readonly IUserRepository _userRepo;
+
         public UserController(IUserRepository userRepo)
-        {            
+        {
             _userRepo = userRepo;
         }
 
-        // POST: UserController/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(UserDto userDto)
+        [Route("/Register")]
+        public async Task<IActionResult> Register(UserDto userDto)
         {
             var user = new User()
             {
-                Name =userDto.Name,
-                Surname= userDto.Surname,
-                Gender=userDto.Gender,
+                Name = userDto.Name,
+                Surname = userDto.Surname,
+                Gender = userDto.Gender,
                 UserName = userDto.UserName,
                 Email = userDto.Email,
             };
-            var result = await _userRepo.RegisterUserAsync(user,userDto.Password);
-            return Ok(new {Status=result});
+            var result = await _userRepo.RegisterUserAsync(user, userDto.Password);
+            return Ok(new { Status = result });
         }
 
-        // GET: UserController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: UserController/Edit/5
+       
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        [Route("/Sign In")]
+        public async Task<IActionResult> Signin(SignInDTO signInDto)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            var result = _userRepo.LoginUserAsync(signInDto.Email,signInDto.Password,signInDto.RemmemberMe);
+            return Ok(new { Status = result }); 
         }
 
-        // GET: UserController/Delete/5
-        public ActionResult Delete(int id)
+
+        [HttpDelete("{Id}")]
+        public async Task<IActionResult> Delete(string Id)
         {
-            return View();
+            var result = _userRepo.DeleteUserAsync(Id);
+            return Ok(new { Status = result });
         }
 
-        // POST: UserController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }
